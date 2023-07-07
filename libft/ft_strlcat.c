@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/07 17:40:55 by ukizilta          #+#    #+#             */
+/*   Updated: 2023/07/07 17:40:57 by ukizilta         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
@@ -26,11 +38,11 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	return (dest_length + src_length);
 }
 
-int main()
+int	main(void)
 {
-    char src[] = "merhaba test";
-    char dst[20];
-    ft_strlcat(dst,src,sizeof(dst));
-    
-    printf("\nsrc: %s | dst:%s\n",src,dst);
+	char src[] = "merhaba test";
+	char dst[20];
+	ft_strlcat(dst, src, sizeof(dst));
+
+	printf("\nsrc: %s | dst:%s\n", src, dst);
 }
