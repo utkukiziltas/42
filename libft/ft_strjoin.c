@@ -6,25 +6,12 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:50 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/07 17:40:52 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/08 15:06:01 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "libft.h"
 
-int	ft_strlen(char const *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -36,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	a1 = ft_strlen(s1);
 	a2 = ft_strlen(s2);
-	a = (char *)malloc(sizeof(char) * (a1 + a2));
+	a = (char *)malloc(sizeof(char) * (a1 + a2 + 1));
 	if (!a)
 		return (NULL);
 	y = 0;

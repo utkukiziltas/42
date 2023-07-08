@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:34:26 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/07 17:41:44 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/08 17:05:34 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,12 @@ char	*ft_strchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strdup(const char *s1);
+void	*ft_calloc(size_t count, size_t size);
+void	*ft_memchr(const void *s, int c, size_t n);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
+
 
 #endif

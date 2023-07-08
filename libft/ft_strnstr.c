@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:41:15 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/07 17:41:15 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/08 19:47:37 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	y = 0;
 	i = 0;
 
-	/* haystak baştan sona doğr ilerlenecek needle daki ilk değer kontrol 
-	edilecek bulunursa onun değeri artırılacak eğer değeri sonlanırsa
-	haystak + y dödürülecek */
 	if (needle == NULL || needle[0] == '\0')
 		return ((char *)haystack);
 	while(haystack[i] && i < len)
@@ -40,7 +37,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 
 
-	return 0;
+	return (0);
 }
 
 int main()

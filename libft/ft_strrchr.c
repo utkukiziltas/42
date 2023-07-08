@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:41:18 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/07 17:41:18 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/08 19:36:53 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
  int main()
  {
     char str[] = "Merhaba Dunya";
-    char *result = ft_strrchr(str, 'a');
+    char *result = ft_strrchr(str, 'D');
 
     if (result != NULL) {
         printf("Son 'a' karakteri: %s\n", result);

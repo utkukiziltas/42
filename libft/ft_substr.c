@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 17:40:33 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 12:41:11 by ukizilta         ###   ########.fr       */
+/*   Created: 2023/07/08 12:52:05 by ukizilta          #+#    #+#             */
+/*   Updated: 2023/07/08 15:05:08 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	i = 0;
+	size_t	i;
+	char	*substr;
 
-	while (i < n)
+	i = 0;
+	substr = (char *)malloc((len + 1) * sizeof(*s));
+	if (!substr)
+		return (NULL);
+	while (s[start] && i < len)
 	{
-		*(char*)(dst + i) = *(char*)(src + i);
+		substr[i] = s[start + i];
 		i++;
 	}
-
-	return 0;
-}
-
-
-int main()
-{
-	char src[] = "Merhaba Dünya!";
-	char dst[20];
-
-   ft_memcpy(dst, src, sizeof(src));
-
-   printf("Kopyalanan bellek bloğu: %s\n", dst);
-
-   return 0;
+	substr[i] = 0;
+	return (substr);
 }

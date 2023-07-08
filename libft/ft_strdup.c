@@ -1,40 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 17:40:41 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 13:57:27 by ukizilta         ###   ########.fr       */
+/*   Created: 2023/07/08 15:05:58 by ukizilta          #+#    #+#             */
+/*   Updated: 2023/07/08 15:05:58 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strdup(const char *s1)
 {
-	size_t	i;
+	char	*p;
+	int		j;
+	int		i;
 
-	if (!b)
-		return (NULL);
 	i = 0;
-	while (i < len)
+	j = strlen(s1);
+	p = (char *)malloc((j + 1) * sizeof(*s1));
+	if (!p)
+		return (0);
+	while (i < j)
 	{
-		*(unsigned char *)(b + i) = (unsigned char)c;
+		p[i] = s1[i];
 		i++;
 	}
-	return (b);
+	p[i] = 0;
+	return (p);
 }
-// bir bellek bloğunu istenilen değerle doldrumak için kullanılır
 
 int	main(void)
 {
-	char	str[50];
+	const char *original = "Merhaba";
+	char *duplicate = ft_strdup(original);
 
-	strcpy(str, "Merhaba Dunya!");
-	printf("Once: %s\n", str);
-	ft_memset(str, 0, sizeof(str));
-	printf("Sonra: %s\n", str);
+	if (duplicate != NULL)
+	{
+		printf("Kopyalanan karakter dizisi: %s\n", duplicate);
+		free(duplicate);
+	}
+	else
+	{
+		printf("Bellek tahsis edilemedi.\n");
+	}
+
 	return (0);
 }
