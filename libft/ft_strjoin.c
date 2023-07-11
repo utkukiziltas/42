@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:50 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/11 14:31:14 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 15:25:35 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,29 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		a1;
 	int		a2;
-	char	*a;
+	char	*result;
 	int		i;
-	int		y;
+	int		j;
 
-	a1 = ft_strlen(s1);
-	a2 = ft_strlen(s2);
-	a = (char *)malloc(sizeof(char) * (a1 + a2 + 1));
-	if (!a)
+	a1 = strlen(s1);
+	a2 = strlen(s2);
+	result = (char *)malloc(sizeof(char) * (a1 + a2 + 1));
+	if (!result)
 		return (NULL);
-	y = 0;
 	i = 0;
 	while (i < a1)
 	{
-		a[i] = s1[i];
+		result[i] = s1[i];
 		i++;
 	}
-	while (y < a2)
+	j = 0;
+	while (j < a2)
 	{
-		a[i] = s2[y];
-		i++;
-		y++;
+		result[i + j] = s2[j];
+		j++;
 	}
-	return (a);
+	result[i + j] = 0;
+	return (result);
 }
 /*int	main(void)
 {
