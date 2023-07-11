@@ -6,13 +6,13 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:30 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/07 17:40:30 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 13:23:24 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

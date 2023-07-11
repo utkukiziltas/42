@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:41:03 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 15:06:06 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 13:27:20 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }
-
+/*
 int	main(void)
 {
 	char source[] = "Merhaba, Dünya!";
@@ -45,3 +45,4 @@ int	main(void)
 
 	return (0);
 }
+*/

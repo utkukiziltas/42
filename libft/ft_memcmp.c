@@ -1,51 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 17:40:50 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/11 14:31:14 by ukizilta         ###   ########.fr       */
+/*   Created: 2023/07/11 14:30:42 by ukizilta          #+#    #+#             */
+/*   Updated: 2023/07/11 14:36:22 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		a1;
-	int		a2;
-	char	*a;
-	int		i;
-	int		y;
+	size_t	i;
 
-	a1 = ft_strlen(s1);
-	a2 = ft_strlen(s2);
-	a = (char *)malloc(sizeof(char) * (a1 + a2 + 1));
-	if (!a)
-		return (NULL);
-	y = 0;
 	i = 0;
-	while (i < a1)
-	{
-		a[i] = s1[i];
+	while ((*(char *)(s1 + i)) == (*(char *)(s2 + i)) && i < n)
 		i++;
-	}
-	while (y < a2)
-	{
-		a[i] = s2[y];
-		i++;
-		y++;
-	}
-	return (a);
+	return (*(char *)(s1 + i) - *(char *)(s2 + i));
 }
 /*int	main(void)
 {
-	char	*s1;
-	char	*s2;
+	char *s1 = "utkua";
+	char *s2 = "utkub";
 
-	s1 = "birinci";
-	s2 = "ikinci";
-	printf("%s", ft_strjoin(s1, s2));
+	printf("%d\n", ft_memcmp(s1, s2, 6));
 }*/

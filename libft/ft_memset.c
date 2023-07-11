@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:41 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 13:57:27 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:20:30 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-// bir bellek bloğunu istenilen değerle doldrumak için kullanılır
 
 int	main(void)
 {

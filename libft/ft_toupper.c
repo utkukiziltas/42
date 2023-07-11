@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:41:24 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/07 17:41:27 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 13:28:37 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,4 @@ int	ft_toupper(int c)
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
 	return (c);
-}
-
-int	main(void)
-{
-	char a = 'a';
-	printf("%c", ft_toupper(a));
 }

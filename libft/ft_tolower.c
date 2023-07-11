@@ -6,22 +6,15 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:41:21 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 15:06:19 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:08:04 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		c += 32;
 	return (c);
-}
-
-int main()
-{
-    char a = 'A';
-    printf("%c",ft_tolower(a));
-
 }

@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:55 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 15:06:03 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 13:27:57 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dest_length = size;
 	return (dest_length + src_length);
 }
-
+/*
 int	main(void)
 {
 	char src[] = "merhaba test";
@@ -46,3 +46,4 @@ int	main(void)
 
 	printf("\nsrc: %s | dst:%s\n", src, dst);
 }
+*/

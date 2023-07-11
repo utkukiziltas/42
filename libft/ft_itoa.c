@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:48 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 16:30:27 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:35:24 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static unsigned int	ft_number_size(int number)
 {
 	unsigned int	length;
-	
+
 	length = 0;
 	if (number == 0)
 		return (1);
@@ -31,11 +31,11 @@ static unsigned int	ft_number_size(int number)
 
 char	*ft_itoa(int n)
 {
-	char		*string;
+	char			*string;
 	unsigned int	number;
 	unsigned int	length;
-	number = 0;
 
+	number = 0;
 	length = ft_number_size(n);
 	string = (char *)malloc(sizeof(char) * (length + 1));
 	if (string == NULL)
@@ -53,15 +53,12 @@ char	*ft_itoa(int n)
 	while (number != 0)
 	{
 		string[length - 1] = (number % 10) + '0';
-		number = number / 10;
+		number /= 10;
 		length--;
 	}
 	return (string);
 }
-
-
-int main()
-{   
-	printf("%s",ft_itoa(-123456789));
-}
-	
+/*int	main(void)
+{
+	printf("%s", ft_itoa(-123456789));
+}*/

@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:36 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 15:05:37 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 13:26:03 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-// direkt olarak açılan alanı sıfır a eşitliyor memset:dinamik olarak belirlediğin değere eşitliyor
-
+/*
+direkt olarak açılan alanı sıfır a eşitliyor
+memset:dinamik olarak belirlediğin değere eşitliyor
 int	main(void)
 {
 	char	str[50];
@@ -37,3 +38,4 @@ int	main(void)
 	printf("Sonra: %s\n", str);
 	return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:58 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 15:05:58 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:28:58 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strdup(const char *s1)
 	p[i] = 0;
 	return (p);
 }
-
+/*
 int	main(void)
 {
 	const char *original = "Merhaba";
@@ -48,4 +48,4 @@ int	main(void)
 	}
 
 	return (0);
-}
+}*/

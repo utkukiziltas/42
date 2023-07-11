@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:34:26 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 17:05:34 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:29:58 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ void	*ft_memchr(const void *s, int c, size_t n);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
-
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif

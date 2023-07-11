@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:40 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 15:05:40 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:07:33 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(p, size);
 	return (p);
 }
-
-int	main(void)
+/*int	main(void)
 {
 	int *numbers;
 	int numElements = 5;
@@ -56,4 +55,4 @@ int	main(void)
 	}
 
 	return (0);
-}
+}*/

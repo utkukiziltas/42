@@ -6,28 +6,26 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:33 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 12:41:11 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 14:17:43 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	size_t i;
-	i = 0;
+	size_t	i;
 
+	i = 0;
 	while (i < n)
 	{
-		*(char*)(dst + i) = *(char*)(src + i);
+		*(char *)(dst + i) = *(char *)(src + i);
 		i++;
 	}
-
-	return 0;
+	return (0);
 }
-
-
-int main()
+/*
+int	main(void)
 {
 	char src[] = "Merhaba Dünya!";
 	char dst[20];
@@ -36,5 +34,5 @@ int main()
 
    printf("Kopyalanan bellek bloğu: %s\n", dst);
 
-   return 0;
-}
+   return (0);
+}*/

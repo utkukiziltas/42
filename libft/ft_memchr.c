@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:51 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/08 15:05:52 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/11 13:45:13 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-int main() {
+/*int main() {
     char buffer[] = {10, 20, 30, 40, 50};
     int searchByte = 10;
     int *result = (int *)ft_memchr(buffer, searchByte, sizeof(buffer));
@@ -40,4 +39,4 @@ int main() {
     }
 
     return 0;
-}
+}*/
