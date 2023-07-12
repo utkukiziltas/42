@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:58 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/11 14:28:58 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/12 12:43:17 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	int		i;
 
 	i = 0;
-	j = strlen(s1);
+	j = ft_strlen(s1);
 	p = (char *)malloc((j + 1) * sizeof(*s1));
 	if (!p)
 		return (0);

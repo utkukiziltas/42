@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:40 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/11 17:34:09 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/12 18:10:06 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ void	*ft_calloc(size_t count, size_t size)
 	b = count * size;
 	p = malloc(b);
 	if (!p)
-		return (0);
-	ft_bzero(p, size);
+		return (NULL);
+	else
+		ft_bzero(p, b);
 	return (p);
 }
 /*int	main(void)

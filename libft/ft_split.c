@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/12 12:51:03 by ukizilta          #+#    #+#             */
+/*   Updated: 2023/07/12 12:51:04 by ukizilta         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	count_word(char *str, char seperate)
@@ -19,37 +31,64 @@ int	count_word(char *str, char seperate)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*arr;
-	int		start;
-	int		i;
-	int		len;
-	int count;
+	char	*substr;
+	size_t	i;
 
-	len = count_word((char *)s, c);
-	arr = malloc(len + 1);
+	substr = (char *)malloc((len + 1) * sizeof(*s));
 	i = 0;
-	start = 0;
-	count = 0;
-	while (s[i])
+	if (!substr)
+		return (NULL);
+	while (s[i] && i < len)
 	{
-		// substr - başlangıç, uzunluk, string.
-		if(s[i] != c)
-			count++;
-		else
-			count = 0;
-		
-
+		substr[i] = s[start + i];
 		i++;
 	}
-	return (arr);
+	substr[i] = 0;
+	return (substr);
 }
 
-int	main(void)
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+	int		last;
+	int		count;
+	int		i;
+	int		word_len;
+
+	word_len = count_word((char *)s, c);
+	arr = (char **)malloc(sizeof(char *) * (word_len + 1));
+	last = 0;
+	count = 0;
+	i = 0;
+	while (s[i])
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		last = i;
+		while (s[last] != c && s[last])
+			last++;
+		if (word_len == count)
+			break ;
+		arr[count++] = ft_substr(s, i, last - i);
+		i = last;
+	}
+	arr[count] = 0;
+	return (arr);
+}
+/*int	main(void)
 {
 	char **str;
 	char *s = "bolunen kelime toplulugu dsa";
+	int i;
 
 	str = ft_split(s, ' ');
-}
+
+	i = 0;
+	while (str[i])
+	{
+		printf("%s\n", str[i]);
+		i++;
+	}
+}*/

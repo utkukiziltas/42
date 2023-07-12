@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:48 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/11 18:01:31 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/12 13:16:29 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,3 @@ char	*ft_itoa(int n)
 	}
 	return (string);
 }
-/*int	main(void)
-{
-	printf("%s", ft_itoa(-123456789));
-}*/

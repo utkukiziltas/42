@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:41 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/11 14:20:30 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/12 18:08:07 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,4 @@ void	*ft_memset(void *b, int c, size_t len)
 		i++;
 	}
 	return (b);
-}
-
-int	main(void)
-{
-	char	str[50];
-
-	strcpy(str, "Merhaba Dunya!");
-	printf("Once: %s\n", str);
-	ft_memset(str, 0, sizeof(str));
-	printf("Sonra: %s\n", str);
-	return (0);
 }

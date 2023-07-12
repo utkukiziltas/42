@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:31 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/11 14:06:22 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/12 17:46:53 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	total;
-	int	sign;
+	int		i;
+	size_t	total;
+	int		sign;
 
 	sign = 1;
 	total = 0;
 	i = 0;
 	if (!str)
 		return (0);
-	while ((str[i] > 7 && str[i] < 14) || str[i] == 32)
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign = -sign;
@@ -39,10 +39,3 @@ int	ft_atoi(const char *str)
 	}
 	return (total * sign);
 }
-/*
-int	main(void)
-{
-	char *test = "   +9932  as";
-	printf("%d \n",ft_atoi(test));
-	printf("\n%d\n",atoi(test));
-}*/

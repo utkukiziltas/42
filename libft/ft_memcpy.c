@@ -6,33 +6,35 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:33 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/11 14:17:43 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/12 18:53:23 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
-
+	size_t i;
+	char *d;
+	char *s;
+	
 	i = 0;
+	s = (char *)src;
+	d = (char *)dst;
 	while (i < n)
 	{
-		*(char *)(dst + i) = *(char *)(src + i);
+		d[i] = s[i];
 		i++;
 	}
-	return (0);
+	return (dst);
 }
-/*
-int	main(void)
+// overlapa dikkat etmeden kopyalama işlemi yapar
+/*int	main(void)
 {
-	char src[] = "Merhaba Dünya!";
-	char dst[20];
+	char	dst[50];
+	char	src[] = "123456789";
 
-   ft_memcpy(dst, src, sizeof(src));
 
-   printf("Kopyalanan bellek bloğu: %s\n", dst);
-
-   return (0);
+	ft_memcpy(dst, src, 5);
+	printf("\ndst:%s - src:%s\n", dst, src);
 }*/
