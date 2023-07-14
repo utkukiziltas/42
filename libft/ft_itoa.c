@@ -6,55 +6,62 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:48 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/14 14:26:30 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/14 15:44:44 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int	ft_number_size(int number)
+size_t	count_len(int n)
 {
-	unsigned int	length;
+	size_t	i;
 
-	length = 0;
-	if (number == 0)
+	i = 0;
+	if (n == 0)
 		return (1);
-	if (number < 0)
-		length += 1;
-	while (number != 0)
+	if (n == -2147483648)
 	{
-		number /= 10;
-		length++;
+		n = 147483648;
+		i = 2;
 	}
-	return (length);
+	if (n < 0)
+	{
+		n *= -1;
+		i = 1;
+	}
+	while (n)
+	{
+		i++;
+		n /= 10;
+	}
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	char			*string;
-	unsigned int	number;
-	unsigned int	length;
+	char	*str;
+	int		digit;
 
-	number = 0;
-	length = ft_number_size(n);
-	string = (char *)malloc(sizeof(char) * (length + 1));
-	if (string == NULL)
+	digit = count_len(n);
+	str = (char *)ft_calloc(digit + 1, sizeof(char));
+	if (!str)
 		return (NULL);
-	if (n < 0)
+	if (n == 0)
+		*str = '0';
+	else if (n < 0)
 	{
-		string[0] = '-';
-		number = -n;
+		if (n == -2147483648)
+		{
+			ft_strlcpy(str, "-2147483648", digit + 1);
+			return (str);
+		}
+		str[0] = '-';
+		n *= -1;
 	}
-	else
-		number = n;
-	if (number == 0)
-		string[0] = '0';
-	string[length] = '\0';
-	while (number != 0)
+	while (n != 0)
 	{
-		string[length - 1] = (number % 10) + '0';
-		number /= 10;
-		length--;
+		*(str + --digit) = (n % 10) + '0';
+		n = n / 10;
 	}
-	return (string);
+	return (str);
 }
