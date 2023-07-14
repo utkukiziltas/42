@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:41:18 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/12 16:54:55 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/14 13:49:21 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*ret;
+	int	i;
 
-	while (*s)
+	i = ft_strlen(s);
+	if (c == 0)
+		return ((char *)(s + i));
+	while (i >= 0)
 	{
-		if (*s == (unsigned char)c)
-			ret = (char *)s;
-		s++;
+		if (s[i] == (unsigned char)c)
+			return ((char *)(s + i));
+		i--;
 	}
-	if (!c)
-		ret = ((char *)s);
-	return (ret);
+	return (0);
 }

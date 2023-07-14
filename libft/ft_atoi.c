@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:31 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/12 17:46:53 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/14 14:20:10 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 int	ft_atoi(const char *str)
 {
-	int		i;
-	size_t	total;
-	int		sign;
+	int	i;
+	int	total;
+	int	sign;
 
 	sign = 1;
 	total = 0;
 	i = 0;
-	if (!str)
-		return (0);
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '-' || str[i] == '+')

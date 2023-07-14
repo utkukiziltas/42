@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 11:56:02 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/12 17:47:33 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/14 14:25:30 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char	*str;
+	char			*str;
 
 	i = 0;
-	str = strdup(s);
+	str = ft_strdup(s);
 	if (!str)
 		return (NULL);
 	while (str[i])
@@ -26,5 +26,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str[i] = (*f)(i, str[i]);
 		i++;
 	}
+	str[i] = 0;
 	return (str);
 }

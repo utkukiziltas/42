@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:33 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/12 18:53:23 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/14 14:58:59 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
-	char *d;
-	char *s;
-	
+	size_t	i;
+	char	*d;
+	char	*s;
+
+	if (!dst && !src)
+		return (NULL);
 	i = 0;
 	s = (char *)src;
 	d = (char *)dst;

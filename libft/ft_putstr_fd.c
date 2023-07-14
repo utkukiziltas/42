@@ -6,13 +6,14 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 18:05:38 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/12 12:52:20 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/14 12:57:59 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <fcntl.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+	write(fd, s, strlen(s));
 }

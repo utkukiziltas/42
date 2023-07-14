@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 12:52:05 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/12 18:43:48 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/14 14:26:08 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,26 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
+	char	*susbstr;
 	size_t	i;
-	size_t j;
+	size_t	s_len;
 
-	substr = (char *)malloc((len + 1) * sizeof(*s));
-	i = 0;
-	j = 0;
-	if (!substr)
+	s_len = ft_strlen(s);
+	if (!s)
 		return (NULL);
-	while (s[i])
+	if (start >= s_len || s_len == 0 || len == 0)
+		return (ft_strdup(""));
+	if (len > s_len - start)
+		len = s_len - start;
+	susbstr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!susbstr)
+		return (NULL);
+	i = 0;
+	while (s[start + i] && i < len)
 	{
-		if (i >= start && j < len)
-		{
-			substr[j] = s[i];
-			j++;
-		}
+		susbstr[i] = s[start + i];
 		i++;
 	}
-	substr[j] = 0;
-	return (substr);
+	susbstr[i] = '\0';
+	return (susbstr);
 }
