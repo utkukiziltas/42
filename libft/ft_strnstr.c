@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:41:15 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/14 14:49:57 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/15 13:59:41 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char *haystack = "detenemetestutku";
-	char *needle = "te";
-	int d = 8;
-
-	printf("\n%s\n",strnstr(haystack,needle,d));
-	printf("\n%s\n",ft_strnstr(haystack,needle,d));
-
-}*/

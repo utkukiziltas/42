@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:05:58 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/12 12:43:17 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/15 14:06:24 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,3 @@ char	*ft_strdup(const char *s1)
 	p[i] = 0;
 	return (p);
 }
-/*
-int	main(void)
-{
-	const char *original = "Merhaba";
-	char *duplicate = ft_strdup(original);
-
-	if (duplicate != NULL)
-	{
-		printf("Kopyalanan karakter dizisi: %s\n", duplicate);
-		free(duplicate);
-	}
-	else
-	{
-		printf("Bellek tahsis edilemedi.\n");
-	}
-
-	return (0);
-}*/

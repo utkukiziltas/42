@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:34:26 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/14 14:59:09 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/15 14:06:31 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 int		ft_atoi(const char *str);

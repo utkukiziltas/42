@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:33 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/14 14:58:59 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/15 13:55:03 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-// overlapa dikkat etmeden kopyalama işlemi yapar
-/*int	main(void)
-{
-	char	dst[50];
-	char	src[] = "123456789";
-
-
-	ft_memcpy(dst, src, 5);
-	printf("\ndst:%s - src:%s\n", dst, src);
-}*/

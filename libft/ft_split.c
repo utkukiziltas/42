@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 12:51:03 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/14 14:27:51 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/15 13:51:13 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,18 +59,3 @@ char	**ft_split(char const *s, char c)
 	arr[count] = 0;
 	return (arr);
 }
-/*int	main(void)
-{
-	char **str;
-	char *s = "bolunen kelime toplulugu dsa";
-	int i;
-
-	str = ft_split(s, ' ');
-
-	i = 0;
-	while (str[i])
-	{
-		printf("%s\n", str[i]);
-		i++;
-	}
-}*/

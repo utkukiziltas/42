@@ -6,7 +6,7 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:41:03 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/14 14:58:11 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/15 13:55:24 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	return (i);
 }
-/*
-int	main(void)
-{
-	char source[] = "Merhaba, Dünya!";
-	char destination[20];
-
-	// `strlcpy` işleviyle `source` dizisini `destination` dizisine kopyalama
-	size_t copied_len = ft_strlcpy(destination, source, sizeof(destination));
-
-	printf("dest: %s\n", destination);
-	printf("src: %s\n", source);
-	printf("Kopyalanan Uzunluk: %zu\n", copied_len);
-
-	return (0);
-}
-*/
