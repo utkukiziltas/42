@@ -12,7 +12,7 @@ OBJS			= $(SRCS:.c=.o)
 
 CC				= gcc
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS			= -Wall -Wextra -Werror
 
 NAME			= libft.a
 
@@ -30,4 +30,4 @@ fclean:			clean
 re:				fclean $(NAME)
 
 
-.PHONY:			all clean fclean re bonus
+.PHONY:			all clean fclean re

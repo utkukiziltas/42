@@ -6,12 +6,11 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:30:19 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/15 13:36:32 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/15 14:48:46 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 static int	ft_isset(char c, const char *set)
 {

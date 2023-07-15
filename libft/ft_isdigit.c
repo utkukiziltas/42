@@ -6,11 +6,11 @@
 /*   By: ukizilta <ukizilta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:40:27 by ukizilta          #+#    #+#             */
-/*   Updated: 2023/07/11 14:59:22 by ukizilta         ###   ########.fr       */
+/*   Updated: 2023/07/15 14:40:01 by ukizilta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
